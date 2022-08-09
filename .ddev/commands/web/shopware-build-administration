@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#ddev-generated
+## Description: Builds the JavaScript for Shopawre
+## Usage: shopware-build-administration [flags] [args]
+## Example: "ddev shopware-build-administration"
+## ProjectTypes: php
+
+
+bash bin/build-administration.sh

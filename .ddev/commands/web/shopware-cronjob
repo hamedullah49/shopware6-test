@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#ddev-generated
+## Description: Run Shopware Cronjob
+## Usage: shopware-cronjob [flags] [args]
+## Example: "ddev shopware-croniob"
+## ProjectTypes: php
+
+bin/console scheduled-task:run --time-limit=295 --memory-limit=512M

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#ddev-generated
+## Description: Run Symfony CLI inside the web container
+## Usage: console [flags] [args]
+## Example: "ddev console system:config:get" or "ddev console database:migrate"
+## ProjectTypes: php
+
+bin/console "$@"
+

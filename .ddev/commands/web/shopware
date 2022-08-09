@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#ddev-generated
+## Description: Run Shopware CLI inside the web container
+## Usage: shopware [flags] [args]
+## Example: "ddev shopware system:config:get" or "ddev shopware database:migrate"
+## ProjectTypes: php
+
+bin/console "$@"
+

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#ddev-generated
+## Description: Builds the JavaScript for Shopawre
+## Usage: shopware-watch-storefront [flags] [args]
+## Example: "ddev shopware-watch-storefront"
+## ProjectTypes: php
+
+
+bash bin/watch-storefront.sh

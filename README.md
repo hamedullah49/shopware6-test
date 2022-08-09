@@ -1,5 +1,7 @@
 # Shopware 6 production template
 
+*This Project is based on the [Shopware Production](https://github.com/shopware/production) template (tag 6.4.14.0)*
+
 This repository contains the production template that enables you to build,
 package and deploy Shopware 6 to production shops. This template is also used
 to build the official packages distributed by shopware at [https://www.shopware.com/en/download](https://www.shopware.com/en/download).

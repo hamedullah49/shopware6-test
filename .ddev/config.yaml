@@ -14,6 +14,8 @@ nfs_mount_enabled: false
 mutagen_enabled: false
 use_dns_when_possible: true
 composer_version: "2"
+project_tld: local
+timezone: Europe/Berlin
 web_environment: []
 
 # Key features of ddev's config.yaml:

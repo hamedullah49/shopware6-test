@@ -66,6 +66,9 @@
         "ext-openssl": "*",
         "ext-tokenizer": "*",
         "ext-xmlwriter": "*",
+
+        "frosh/development-helper": "0.3.3",
+
         "defuse/php-encryption": "~2.2.1",
         "dms/phpunit-arraysubset-asserts": "^0.2.1",
         "fakerphp/faker": "~1.14.1",

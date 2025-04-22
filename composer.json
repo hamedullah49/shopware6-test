@@ -16,20 +16,15 @@
     "minimum-stability": "stable",
     "scripts": {
         "pre-install-cmd": [
-            "[ ! -f vendor/autoload.php ] || $PHP_BINARY bin/console system:update:prepare"
-        ],
-        "pre-update-cmd": [
-            "[ ! -f vendor/autoload.php ] || $PHP_BINARY bin/console system:update:prepare"
+            "@php -r \"if (file_exists('vendor/autoload.php')) { passthru('php bin/console system:update:prepare'); }\""
         ],
         "post-install-cmd": [
-            "@composer install --working-dir vendor/shopware/recovery --no-interaction --no-scripts",
-            "@composer install --working-dir=vendor/shopware/recovery/Common --no-interaction --optimize-autoloader --no-suggest",
-            "[ ! -f vendor/autoload.php ] || $PHP_BINARY bin/console system:update:finish"
+            "@php -r \"if (is_dir('vendor/shopware/recovery')) { passthru('composer install --working-dir vendor/shopware/recovery --no-interaction --no-scripts'); }\"",
+            "@php -r \"if (is_dir('vendor/shopware/recovery/Common')) { passthru('composer install --working-dir vendor/shopware/recovery/Common --no-interaction --optimize-autoloader'); }\"",
+            "@php -r \"if (file_exists('vendor/autoload.php')) { passthru('php bin/console system:update:finish'); }\""
         ],
         "post-update-cmd": [
-            "@composer install --working-dir vendor/shopware/recovery --no-interaction --no-scripts",
-            "@composer install --working-dir=vendor/shopware/recovery/Common --no-interaction --optimize-autoloader --no-suggest",
-            "[ ! -f vendor/autoload.php ] || $PHP_BINARY bin/console system:update:finish"
+            "@post-install-cmd"
         ]
     },
     "autoload": {
